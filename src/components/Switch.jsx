@@ -1,23 +1,25 @@
 const Switch = (props) => {
   return (
     <>
-      <button
-        onClick={() => {
-          props.setSwitch1(!switch1);
-        }}
-        className={switch1 === false ? "unselect" : "select"}
-      >
-        On
-      </button>
-      ;
-      <button
-        onClick={() => {
-          props.setSwitch1(!switch1);
-        }}
-        className={switch1 === true ? "unselect" : "select"}
-      >
-        Off
-      </button>
+      <div className="set-button">
+        <button
+          onClick={() => {
+            props.setSwitch(!props.switch);
+          }}
+          className={props.switch === false ? "unselect" : "select"}
+        >
+          On
+        </button>
+
+        <button
+          onClick={() => {
+            props.setSwitch(!props.switch);
+          }}
+          className={props.switch === true ? "unselect" : "select"}
+        >
+          Off
+        </button>
+      </div>
     </>
   );
 };
